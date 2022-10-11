@@ -12,13 +12,29 @@ class Film
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
+
+    #[ORM\Column(length: 120)]
     private ?string $title = null;
+
+    #[ORM\Column(length: 120)]
+    private ?string $realisateur = null;
+
+    #[ORM\Column(length: 120)]
+    private ?string $actors = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $poster = null;
+
+    
+
+    #[ORM\Column(length: 120)]
+    private ?string $genre = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
-    
+
     public function getTitle(): ?string
     {
         return $this->title;
